@@ -1,0 +1,36 @@
+<template name = "forum">
+  <body>
+    <div id="harsha" class="harsha">
+
+    </div>
+    <div id="contact" class="content-section-a">
+      <div class="container">
+        <div class="row">
+
+        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+
+          <h1>chatterbox</h1>
+             {{> input}}
+             {{> messages}}
+    </div>  </div>  </div>
+    <div id="contact" class="content-section-a">
+      <div class="container">
+        <div class="row">
+
+        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+
+      {{#each message}}
+      {{message.name}}
+
+      {{/each}}
+    </div>
+      </div>  </div>  </div>
+  </body>
+</template>
+<template name="messages">
+  <div id="chats" class="chat">
+    {{#each messages}}
+      <span class="username">{{name}}: </span> {{message}} <br>
+    {{/each}}
+  </div>
+</template>

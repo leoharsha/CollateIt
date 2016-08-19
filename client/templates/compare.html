@@ -1,0 +1,241 @@
+<template name= "table">
+  <body id= "home">
+<div id="harsha" class="harsha">
+
+  {{#if currentUser}}
+<h2> </h2><br><br>
+<h2>CompareIT</h2>
+<p class="lead" style="margin-top:0">Compare the top 15 NIT's around the India.</p>
+<p class="lead" style="margin-top:0">(The NIT which have higher points is the best NIT compare to other)</p><br>
+
+  <!-- PRICING TABLE STYLE 3-->
+  <div class="container">
+      <div class="row">
+
+          <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">
+
+              <div class="price_table_container">
+
+                  <div class="price_table_heading">
+                    <span class="addcollege" Style="display: none; margin:10px;">Select College To Compare</span>
+                                         <select name="addcollege" class="addcollege" id="addcollege" value="addcollege" font-size:18px>
+                                <option value="">--Select College--</option>
+                                              <option name="NIT-Warangal" id="NIT-Warangal">NIT-Warangal</option>
+                                              <option value="NIT-Tiruchirapalli">NIT, Tiruchirapalli</option>
+                                              <option value="NIT-Suratkal">NIT, Suratkal</option>
+                                              <option value="MNNIT-Allahabad">MNNIT, Allahabad</option>
+                                              <option value="NIT-Calicut">NIT, Calicut</option>
+                                              <option value="MNIT-Jaipur">MNIT, Jaipur</option>
+                                              <option value="MANIT-Bhopal">MANIT, Bhopal</option>
+                                              <option value="VNIT-Nagpur">VNIT, Nagpur</option>
+                                              <option value="NIT-Kurukshetra">NIT, Kurukshetra</option>
+                                              <option value="NIT-Rourkela">NIT, Rourkela</option>
+                                              <option value="NIT-Hamirpur">NIT, Hamirpur</option>
+                                              <option value="NIT-Surat">NIT, Surat</option>
+                                              <option value="NIT-Durgapur">NIT, Durgapur</option>
+                                              <option value="NIT-Jalandhar">NIT, Jalandhar</option>
+                                              <option value="NIT-Jamshedpur">NIT, Jamshedpur</option>
+
+                                           </select>
+                  </div>
+
+  {{#with show}}
+                  <div class="price_table_body">
+                      <div class="price_table_row cost warning-text"><strong>{{show.name}}</strong></div>
+
+                      <div class="price_table_row">Rank: {{show.rank}} ({{rankpts}} Points)</div>
+
+
+                      <div class="price_table_row">Fees: {{show.fee}} Points</div>
+                      <div class="price_table_row">Infrastructure: {{show.infra}} Points</div>
+                      <div class="price_table_row">Cut Off: {{show.cutoff}} Points</div>
+                      <div class="price_table_row">Placements: {{show.placements}} Points</div>
+                      <div class="price_table_row">Departments: {{show.department}} Points</div>
+                      <div class="price_table_row">Strength of students: {{show.students}} Points</div>
+                      <div class="price_table_row">Fests conducted: {{show.fest}} Points</div>
+                      <div class="price_table_row">Zone: {{show.zone}}</div>
+
+                  </div>
+                  {{/with}}
+                  <a href="#" class="btn btn-warning btn-lg btn-block">Total(All Factors): {{show.total}} </a>
+              </div>
+
+          </div>
+
+
+          <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">
+
+              <div class="price_table_container">
+
+                  <div class="price_table_heading">
+                    <span class="addcollege" Style="display: none; margin:10px;">Select College To Compare</span>
+                                         <select name="addcollege" class="addcollege" id="addcollegee" value="addcollegee" font-size:18px>
+                                <option value="">--Select College--</option>
+                                              <option value="NIT-Warangal" id="NIT-Warangal">NIT-Warangal</option>
+                                              <option value="NIT-Tiruchirapalli">NIT, Tiruchirapalli</option>
+                                              <option value="NIT-Suratkal">NIT, Suratkal</option>
+                                              <option value="MNNIT-Allahabad">MNNIT, Allahabad</option>
+                                              <option value="NIT-Calicut">NIT, Calicut</option>
+                                              <option value="MNIT-Jaipur">MNIT, Jaipur</option>
+                                              <option value="MANIT-Bhopal">MANIT, Bhopal</option>
+                                              <option value="VNIT-Nagpur">VNIT, Nagpur</option>
+                                              <option value="NIT-Kurukshetra">NIT, Kurukshetra</option>
+                                              <option value="NIT-Rourkela">NIT, Rourkela</option>
+                                              <option value="NIT-Hamirpur">NIT, Hamirpur</option>
+                                              <option value="NIT-Surat">NIT, Surat</option>
+                                              <option value="NIT-Durgapur">NIT, Durgapur</option>
+                                              <option value="NIT-Jalandhar">NIT, Jalandhar</option>
+                                              <option value="NIT-Jamshedpur">NIT, Jamshedpur</option>
+
+                                           </select>
+                  </div>
+
+  {{#with showw}}
+                  <div class="price_table_body">
+                      <div class="price_table_row cost warning-text"><strong>{{showw.name}}</strong></div>
+
+                      <div class="price_table_row">Rank: {{showw.rank}} ({{rankpts}} Points)</div>
+
+
+                      <div class="price_table_row">Fees: {{showw.fee}} Points</div>
+                      <div class="price_table_row">Infrastructure: {{infra}} Points</div>
+                      <div class="price_table_row">Cut Off: {{cutoff}} Points</div>
+                      <div class="price_table_row">Placements: {{placements}} Points</div>
+                      <div class="price_table_row">Departments: {{department}} Points</div>
+                      <div class="price_table_row">Strength of students: {{students}} Points</div>
+                      <div class="price_table_row">Fests conducted: {{fest}} Points</div>
+                      <div class="price_table_row">Zone: {{zone}}</div>
+
+                  </div>
+                  {{/with}}
+                  <a href="#" class="btn btn-warning btn-lg btn-block">Total(All Factors): {{showw.total}} </a>
+              </div>
+
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">
+
+              <div class="price_table_container">
+
+                  <div class="price_table_heading">
+                    <span class="addcollege" Style="display: none; margin:10px;">Select College To Compare</span>
+                                         <select name="addcollegeee" class="addcollegeee" id="addcollegeee" value="addcollegeee" font-size:18px>
+                                <option value="">--Select College--</option>
+                                              <option name="NIT-Warangal" id="NIT-Warangal">NIT-Warangal</option>
+                                              <option value="NIT-Tiruchirapalli">NIT, Tiruchirapalli</option>
+                                              <option value="NIT-Suratkal">NIT, Suratkal</option>
+                                              <option value="MNNIT-Allahabad">MNNIT, Allahabad</option>
+                                              <option value="NIT-Calicut">NIT, Calicut</option>
+                                              <option value="MNIT-Jaipur">MNIT, Jaipur</option>
+                                              <option value="MANIT-Bhopal">MANIT, Bhopal</option>
+                                              <option value="VNIT-Nagpur">VNIT, Nagpur</option>
+                                              <option value="NIT-Kurukshetra">NIT, Kurukshetra</option>
+                                              <option value="NIT-Rourkela">NIT, Rourkela</option>
+                                              <option value="NIT-Hamirpur">NIT, Hamirpur</option>
+                                              <option value="NIT-Surat">NIT, Surat</option>
+                                              <option value="NIT-Durgapur">NIT, Durgapur</option>
+                                              <option value="NIT-Jalandhar">NIT, Jalandhar</option>
+                                              <option value="NIT-Jamshedpur">NIT, Jamshedpur</option>
+
+                                           </select>
+                  </div>
+
+  {{#with showww}}
+                  <div class="price_table_body">
+                      <div class="price_table_row cost warning-text"><strong>{{name}}</strong></div>
+
+                      <div class="price_table_row">Rank: {{rank}} ({{rankpts}} Points)</div>
+
+
+                      <div class="price_table_row">Fees: {{fee}} Points</div>
+                      <div class="price_table_row">Infrastructure: {{infra}} Points</div>
+                      <div class="price_table_row">Cut Off: {{cutoff}} Points</div>
+                      <div class="price_table_row">Placements: {{placements}} Points</div>
+                      <div class="price_table_row">Departments: {{department}} Points</div>
+                      <div class="price_table_row">Strength of students: {{students}} Points</div>
+                      <div class="price_table_row">Fests conducted: {{fest}} Points</div>
+                      <div class="price_table_row">Zone: {{zone}}</div>
+
+                  </div>
+                  {{/with}}
+                  <a href="#" class="btn btn-warning btn-lg btn-block">Total(All Factors): {{showww.total}} </a>
+              </div>
+
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12 float-shadow">
+
+              <div class="price_table_container">
+
+                  <div class="price_table_heading">
+                    <span class="addcollege" Style="display: none; margin:10px;">Select College To Compare</span>
+                                         <select name="addcollege" class="addcollege" id="addcollegeeee" value="addcollegeeee" font-size:18px>
+                                <option value="">--Select College--</option>
+                                              <option name="NIT-Warangal" id="NIT-Warangal">NIT-Warangal</option>
+                                              <option value="NIT-Tiruchirapalli">NIT, Tiruchirapalli</option>
+                                              <option value="NIT-Suratkal">NIT, Suratkal</option>
+                                              <option value="MNNIT-Allahabad">MNNIT, Allahabad</option>
+                                              <option value="NIT-Calicut">NIT, Calicut</option>
+                                              <option value="MNIT-Jaipur">MNIT, Jaipur</option>
+                                              <option value="MANIT-Bhopal">MANIT, Bhopal</option>
+                                              <option value="VNIT-Nagpur">VNIT, Nagpur</option>
+                                              <option value="NIT-Kurukshetra">NIT, Kurukshetra</option>
+                                              <option value="NIT-Rourkela">NIT, Rourkela</option>
+                                              <option value="NIT-Hamirpur">NIT, Hamirpur</option>
+                                              <option value="NIT-Surat">NIT, Surat</option>
+                                              <option value="NIT-Durgapur">NIT, Durgapur</option>
+                                              <option value="NIT-Jalandhar">NIT, Jalandhar</option>
+                                              <option value="NIT-Jamshedpur">NIT, Jamshedpur</option>
+
+                                           </select>
+                  </div>
+
+  {{#with showwww}}
+                  <div class="price_table_body">
+                      <div class="price_table_row cost warning-text"><strong>{{name}}</strong></div>
+
+                      <div class="price_table_row">Rank: {{showwww.rank}} ({{rankpts}} Points)</div>
+
+
+                      <div class="price_table_row">Fees: {{fee}} Points</div>
+                      <div class="price_table_row">Infrastructure: {{infra}} Points</div>
+                      <div class="price_table_row">Cut Off: {{cutoff}} Points</div>
+                      <div class="price_table_row">Placements: {{placements}} Points</div>
+                      <div class="price_table_row">Departments: {{department}} Points</div>
+                      <div class="price_table_row">Strength of students: {{students}} Points</div>
+                      <div class="price_table_row">Fests conducted: {{fest}} Points</div>
+                      <div class="price_table_row">Zone: {{showwww.zone}}</div>
+
+                  </div>
+                  {{/with}}
+                  <a href="#" class="btn btn-warning btn-lg btn-block">Total(All Factors): {{showwww.total}} </a>
+              </div>
+
+  </div>
+  <!-- PRICING TABLE STYLE 3-->
+</div>
+  <!-- SPACER-->
+  <div class="spacer"></div>
+  </div>
+  {{else}}
+  <div id="downloadlinkk" class="bannerr">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+        <h2>You need to login to view this section.</h2>
+        <p class="lead" style="margin-top:0">Click below to login</p>
+        <p><a>{{> loginButtons}}</a></p>
+       </div>
+      </div>
+    </div>
+  </div>
+  {{> footer}}
+             {{/if}}
+
+
+  </div>
+  
+  <!-- SPACER-->
+  </body>
+
+</template>

@@ -1,0 +1,40 @@
+<template name= "login">
+  <div id="harsha" class="harsha">
+
+  </div>
+    <div class="content-section-a">
+
+        <div class="container">
+
+             <div class="row">
+
+        <div class="col-sm-6 pull-right wow fadeInRightBig">
+                    <img class="img-responsive " src="colle.jpg" alt="">
+                </div>
+
+                <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="5">
+                    <h3 class="section-heading">Login/Sign Up</h3>
+                    <p class="lead">Join our community.It's free and always be.
+          </p>
+
+          <ul class="descp lead2">
+
+                    {{#if currentUser}}
+                                  <li>
+
+                  <a href="#" class = "logout">Logout</a>
+
+                  </li>
+                  <a href="/" >Home</a>
+                  {{else}}
+                    <li> {{> loginButtons}}</li>
+                               {{/if}}
+
+          </ul>
+        </div>
+            </div>
+        </div>
+
+    </div>
+
+</template>
